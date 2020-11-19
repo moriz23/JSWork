@@ -5,13 +5,17 @@ export class Tooltip extends Cmp {
     super(hostElementId);
     this.closeNotifier = closeNotifierFunction;
     this.text = text;
+    this.closeTooltip = () => {
+      this.detach();
+      this.closeNotifier();
+    };
     this.create();
   }
 
-  closeTooltip = () => {
-    this.detach();
-    this.closeNotifier();
-  };
+  // closeTooltip = () => {
+  //   this.detach();
+  //   this.closeNotifier();
+  // };
 
   create() {
     const tooltipElement = document.createElement('div');
