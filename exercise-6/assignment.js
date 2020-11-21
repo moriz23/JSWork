@@ -14,8 +14,7 @@ console.log(greaterThanFive);
 console.log(greaterThanFiveArrayObj);
 console.log(multiplication);
 
-const findMax = (...nums) => {
-  let currMax = nums[0];
+const findMax = (...nums) => {  let currMax = nums[0];
   for(const num of nums){
     if(num > currMax){
       currMax = num;
